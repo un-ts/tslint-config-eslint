@@ -1,0 +1,3 @@
+{
+  "extends": ["./prettier.json", "@1stg/tslint-config"]
+}

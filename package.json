@@ -1,0 +1,44 @@
+{
+  "name": "tslint-config-eslint",
+  "version": "0.0.0",
+  "description": "Yet another TSLint Configuration which disables all rules which has been handled by `eslint` or `@typescript-eslint`.",
+  "repository": "git@github.com:rx-ts/tslint-config-eslint.git",
+  "author": "JounQin <admin@1stg.me>",
+  "license": "MIT",
+  "main": "base.json",
+  "files": [
+    "*.json"
+  ],
+  "scripts": {
+    "build": "ts-node build",
+    "lint": "eslint . --ext jd,md,ts -f friendly",
+    "type-coverage": "type-coverage --cache --detail --ignore-files *.d.ts --strict"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.3.1",
+    "tslint": "^5.20.0",
+    "typescript": ">=3.5.3"
+  },
+  "devDependencies": {
+    "@1stg/babel-preset": "^0.7.0",
+    "@1stg/commitlint-config": "^0.1.0",
+    "@1stg/eslint-config": "^0.12.12",
+    "@1stg/husky-config": "^0.3.0",
+    "@1stg/lint-staged": "^0.8.0",
+    "@1stg/prettier-config": "^0.3.1",
+    "@1stg/remark-config": "^0.2.1",
+    "@1stg/tsconfig": "^0.6.0",
+    "@1stg/tslint-config": "^0.4.0",
+    "@babel/core": "^7.6.2",
+    "@commitlint/cli": "^8.2.0",
+    "@types/node": "^12.7.7",
+    "eslint": "^6.4.0",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.3.0",
+    "prettier": "^1.18.2",
+    "ts-node": "^8.4.1",
+    "tslint": "^5.20.0",
+    "type-coverage": "^2.3.0",
+    "typescript": "^3.6.3"
+  }
+}
