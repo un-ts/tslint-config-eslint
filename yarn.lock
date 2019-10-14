@@ -101,14 +101,15 @@
   optionalDependencies:
     tslib "^1.10.0"
 
-"@1stg/tslint-config@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@1stg/tslint-config/-/tslint-config-0.4.0.tgz#02d910f99a8ec3dc3dfd5090b0fca4cdce46a382"
-  integrity sha512-5aoZXbArDI6ah+QA6ZmXpxo/Yr6yWw+n6JqfX5xLH0NCVsYIcqJWn/Un1EZQJ7nuDPfRSgKbsdxRjITokw9/2Q==
+"@1stg/tslint-config@^0.4.3":
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/@1stg/tslint-config/-/tslint-config-0.4.3.tgz#4caf075ea257263907a3961178c39cc67b23ad12"
+  integrity sha512-DzWcnfl/BjraSRgwFIhI3VB76wXNmuAMCmxBkLzMHbywH8DYNUxNSuHCaB1vsjSPl4BbPHNJEZtLRdyUeiVksg==
   dependencies:
-    codelyzer "^5.1.1"
+    codelyzer "^5.1.2"
     rxjs-tslint "^0.1.7"
     tslint-angular "^3.0.2"
+    tslint-config-eslint "^0.1.1"
     tslint-config-prettier "^1.18.0"
     tslint-plugin-prettier "^2.0.1"
     tslint-react "^4.1.0"
@@ -2121,10 +2122,10 @@ code-point-at@^1.0.0:
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
   integrity sha1-DQcLTQQ6W+ozovGkDi7bPZpMz3c=
 
-codelyzer@^5.1.1:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/codelyzer/-/codelyzer-5.1.1.tgz#a599fa8c2a5847f553a792b934e493d1506a4a62"
-  integrity sha512-t8ZLSZBUjVFOJVk4jASLgmTdKWK/0ZsQCnPXy6PXw1LWOOormQOVnyy4OYoiZ6rAWTrz60Obx+zA2t8xY53QzQ==
+codelyzer@^5.1.2:
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/codelyzer/-/codelyzer-5.1.2.tgz#e6c08269f8796483e57e6d9b7c29723572472b1d"
+  integrity sha512-1z7mtpwxcz5uUqq0HLO0ifj/tz2dWEmeaK+8c5TEZXAwwVxrjjg0118ODCOCCOcpfYaaEHxStNCaWVYo9FUPXw==
   dependencies:
     app-root-path "^2.2.1"
     aria-query "^3.0.0"
@@ -5706,6 +5707,11 @@ tslint-angular@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/tslint-angular/-/tslint-angular-3.0.2.tgz#6f7480cc34f26fcc03df18d7ec3d5ce364b65064"
   integrity sha512-UgeGO776Z7VvzCnW6pOsbL3qs7PwzZatKkk2OzQO45H9Zf4T+bNBz87nFkB96W/swyCHmpK2M0vl61n0biFVTQ==
+
+tslint-config-eslint@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/tslint-config-eslint/-/tslint-config-eslint-0.1.1.tgz#fd42b574c2a919b93d04b48a9f63d659c1ae00e1"
+  integrity sha512-kO9BDeZJZ8aD5oJzyS4UITT8fBC7xJD7S4SXIS65srkb+ZaO5ciwhL4uS+V0N5aRrX1wpIgJm/HyvJSKSaZ1EQ==
 
 tslint-config-prettier@^1.18.0:
   version "1.18.0"
