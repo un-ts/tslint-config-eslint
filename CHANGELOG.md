@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/rx-ts/tslint-config-eslint/compare/v0.1.1...v0.2.0) (2019-11-06)
+
+
+### Features
+
+* add sonar config, eslint-plugin-sonarjs replaces tslint-sonarts ([2f6fe5d](https://github.com/rx-ts/tslint-config-eslint/commit/2f6fe5d265869ed9aff549c6808e08d4fab0807a))
+
 ### [0.1.1](https://github.com/rx-ts/tslint-config-eslint/compare/v0.1.0...v0.1.1) (2019-09-29)
 
 
