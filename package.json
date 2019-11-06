@@ -1,6 +1,6 @@
 {
   "name": "tslint-config-eslint",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Yet another TSLint Configuration which disables all rules which has been handled by `eslint` or `@typescript-eslint`.",
   "repository": "git@github.com:rx-ts/tslint-config-eslint.git",
   "author": "JounQin <admin@1stg.me>",
@@ -8,7 +8,8 @@
   "main": "base.json",
   "files": [
     "base.json",
-    "prettier.json"
+    "prettier.json",
+    "sonar.json"
   ],
   "scripts": {
     "build": "ts-node build",
@@ -16,31 +17,19 @@
     "type-coverage": "type-coverage --cache --detail --ignore-files *.d.ts --strict"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.3.1",
-    "tslint": "^5.20.0",
-    "typescript": ">=3.5.3"
+    "@typescript-eslint/eslint-plugin": ">=2.0.0",
+    "tslint": ">=5.0.0",
+    "typescript": ">=3.0.0"
   },
   "devDependencies": {
-    "@1stg/babel-preset": "^0.7.0",
-    "@1stg/commitlint-config": "^0.1.0",
-    "@1stg/eslint-config": "^0.12.12",
-    "@1stg/husky-config": "^0.3.0",
-    "@1stg/lint-staged": "^0.8.0",
-    "@1stg/prettier-config": "^0.3.1",
-    "@1stg/remark-config": "^0.2.1",
-    "@1stg/tsconfig": "^0.6.0",
-    "@1stg/tslint-config": "^0.4.0",
-    "@babel/core": "^7.6.2",
-    "@commitlint/cli": "^8.2.0",
-    "@types/node": "^12.7.7",
-    "eslint": "^6.4.0",
-    "husky": "^3.0.5",
-    "lint-staged": "^9.3.0",
-    "prettier": "^1.18.2",
+    "@1stg/lib-config": "^0.1.9",
+    "@1stg/tslint-config": "^0.5.5",
+    "@babel/core": "^7.7.0",
+    "@types/node": "^12.12.6",
     "ts-node": "^8.4.1",
-    "tslint": "^5.20.0",
+    "tslint": "^5.20.1",
     "type-coverage": "^2.3.0",
-    "typescript": "^3.6.3"
+    "typescript": "^3.7.2"
   },
   "typeCoverage": {
     "atLeast": 100
