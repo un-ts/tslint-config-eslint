@@ -56,6 +56,12 @@ npm i -D tslint-config-eslint
 }
 ```
 
+```jsonc
+{
+  "extends": ["your original great configs", "tslint-config-eslint/sonar"] // if you're using tslint with eslint-plugin-sonarjs
+}
+```
+
 ## Forthcoming
 
 Forthcoming configs include:
