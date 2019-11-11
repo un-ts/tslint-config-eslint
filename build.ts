@@ -1,4 +1,3 @@
-/* eslint-disable node/no-extraneous-require */
 import fs from 'fs'
 
 const CORE_AS_IS_REPLACEMENTS = [
