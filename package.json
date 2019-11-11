@@ -22,7 +22,7 @@
     "typescript": ">=3.0.0"
   },
   "devDependencies": {
-    "@1stg/lib-config": "^0.1.9",
+    "@1stg/lib-config": "^0.1.13",
     "@1stg/tslint-config": "^0.5.5",
     "@babel/core": "^7.7.0",
     "@types/node": "^12.12.6",
