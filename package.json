@@ -25,7 +25,7 @@
     "@1stg/lib-config": "^0.1.13",
     "@1stg/tslint-config": "^0.5.6",
     "@babel/core": "^7.7.0",
-    "@types/node": "^12.12.6",
+    "@types/node": "^12.12.7",
     "ts-node": "^8.4.1",
     "tslint": "^5.20.1",
     "type-coverage": "^2.3.0",
