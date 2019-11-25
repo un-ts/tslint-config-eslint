@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/rx-ts/tslint-config-eslint/compare/v0.2.0...v0.2.1) (2019-11-25)
+
+
+### Features
+
+* disallowed parameters-max-number in tslint-config-eslint/sonar ([#41](https://github.com/rx-ts/tslint-config-eslint/issues/41)) ([07c4d15](https://github.com/rx-ts/tslint-config-eslint/commit/07c4d15120808560dbfb88df07901f0f4e9cd5de))
+
 ## [0.2.0](https://github.com/rx-ts/tslint-config-eslint/compare/v0.1.1...v0.2.0) (2019-11-06)
 
 
