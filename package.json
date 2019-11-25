@@ -1,6 +1,6 @@
 {
   "name": "tslint-config-eslint",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Yet another TSLint Configuration which disables all rules which has been handled by `eslint` or `@typescript-eslint`.",
   "repository": "git@github.com:rx-ts/tslint-config-eslint.git",
   "author": "JounQin <admin@1stg.me>",
@@ -35,8 +35,8 @@
     "type-coverage": "^2.3.1"
   },
   "resolutions": {
-    "@babel/core": "^7.7.2",
-    "@babel/preset-env": "^7.7.1",
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
     "eslint-plugin-prettier": "^3.1.1",
     "typescript": "^3.7.2"
   },
