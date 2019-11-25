@@ -13,6 +13,7 @@
     "no-redundant-boolean": false,
     "no-small-switch": false,
     "no-useless-catch": false,
-    "prefer-immediate-return": false
+    "prefer-immediate-return": false,
+    "parameters-max-number": false
   }
 }
