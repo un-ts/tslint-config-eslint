@@ -22,7 +22,7 @@
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": ">=2.15.0",
     "tslint": ">=5.0.0",
-    "typescript": ">=3.7.4"
+    "typescript": ">=3.7.5"
   },
   "devDependencies": {
     "@1stg/lib-config": "^0.1.19",
@@ -38,7 +38,7 @@
     "@babel/core": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
     "eslint-plugin-prettier": "^3.1.1",
-    "typescript": ">=3.7.4"
+    "typescript": ">=3.7.5"
   },
   "typeCoverage": {
     "atLeast": 100
