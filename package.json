@@ -25,7 +25,7 @@
     "typescript": ">=3.0.0"
   },
   "devDependencies": {
-    "@1stg/lib-config": "^0.1.19",
+    "@1stg/lib-config": "^0.1.20",
     "@1stg/tslint-config": "^0.5.8",
     "@types/node": "^13.1.8",
     "core-js": "^3.6.4",
