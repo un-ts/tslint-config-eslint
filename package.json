@@ -30,7 +30,7 @@
     "@types/node": "^13.13.4",
     "core-js": "^3.6.5",
     "npm-run-all": "^4.1.5",
-    "ts-node": "^8.9.1",
+    "ts-node": "^8.10.2",
     "tslint": "^6.1.1",
     "type-coverage": "^2.4.2"
   },
