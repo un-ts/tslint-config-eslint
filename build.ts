@@ -61,6 +61,7 @@ const CORE_REPLACEMENTS = CORE_AS_IS_REPLACEMENTS.reduce(
     'object-literal-key-quotes': 'quote-props',
     'object-literal-shorthand': 'object-shorthand',
     'one-variable-per-declaration': 'one-var',
+    'prefer-default-last': 'default-case-last',
     'prefer-function-over-method': 'class-methods-use-this',
     'space-within-parens': 'space-in-parens',
     'unnecessary-else': 'no-else-return',
@@ -132,15 +133,16 @@ const ADDITIONAL_REPLACEMENTS = ADDITIONAL_AS_IS_REPLACEMENTS.reduce(
   },
 )
 
-const DISABLED_RULES = Object.keys(CORE_REPLACEMENTS)
-  .concat(Object.keys(ADDITIONAL_REPLACEMENTS))
-  .reduce(
-    (rules, rule) =>
-      Object.assign(rules, {
-        [rule]: false,
-      }),
-    {},
-  )
+const DISABLED_RULES = [
+  ...Object.keys(CORE_REPLACEMENTS),
+  ...Object.keys(ADDITIONAL_REPLACEMENTS),
+].reduce(
+  (rules, rule) =>
+    Object.assign(rules, {
+      [rule]: false,
+    }),
+  {},
+)
 
 fs.writeFileSync(
   'base.json',

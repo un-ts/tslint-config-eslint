@@ -1,8 +1,8 @@
 # tslint-config-eslint
 
-> Yet another TSLint Configuration which disables all rules which has been handled by `eslint` or `@typescript-eslint`.
+> Yet another TSLint Configuration which disables all rules which has been handled by `eslint` or `@typescript-eslint`
 
-[![Travis](https://img.shields.io/travis/com/rx-ts/tslint-config-eslint.svg)](https://travis-ci.com/rx-ts/tslint-config-eslint)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/rx-ts/tslint-config-eslint/Publish%20package)](https://github.com/rx-ts/tslint-config-eslint/actions?query=workflow%3A%22Publish+package%22)
 [![Codacy Grade](https://img.shields.io/codacy/grade/5c70cd4efc864eb3b344e32be9aecce8)](https://www.codacy.com/app/JounQin/tslint-config-eslint)
 [![type-coverage](https://img.shields.io/badge/dynamic/json.svg?label=type-coverage&prefix=%E2%89%A5&suffix=%&query=$.typeCoverage.atLeast&uri=https%3A%2F%2Fraw.githubusercontent.com%2Frx-ts%2Ftslint-config-eslint%2Fmaster%2Fpackage.json)](https://github.com/plantain-00/type-coverage)
 [![npm](https://img.shields.io/npm/v/tslint-config-eslint.svg)](https://www.npmjs.com/package/tslint-config-eslint)
