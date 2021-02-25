@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.2](https://github.com/rx-ts/tslint-config-eslint/compare/v0.2.1...v0.2.2) (2021-02-25)
+
+
+### Features
+
+* disable prefer-default-last ([886778d](https://github.com/rx-ts/tslint-config-eslint/commit/886778db105a837ba2193fc84ae413b27100d1e1))
+
 ### [0.2.1](https://github.com/rx-ts/tslint-config-eslint/compare/v0.2.0...v0.2.1) (2019-11-25)
 
 
