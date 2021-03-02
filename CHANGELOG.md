@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/rx-ts/tslint-config-eslint/compare/v0.2.2...v0.3.0) (2021-03-02)
+
+
+### Features
+
+* disable deprecation in favor of sonar/deprecation ([32aa1d1](https://github.com/rx-ts/tslint-config-eslint/commit/32aa1d1e58349ae29f54b684128555a1f686be3a))
+
 ### [0.2.2](https://github.com/rx-ts/tslint-config-eslint/compare/v0.2.1...v0.2.2) (2021-02-25)
 
 
