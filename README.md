@@ -1,6 +1,6 @@
 # tslint-config-eslint
 
-> Yet another TSLint Configuration which disables all rules which has been handled by `eslint` or `@typescript-eslint`
+> Yet another TSLint Configuration which disables all rules which has been handled by `eslint`, `@typescript-eslint` or [`eslint-plugin-sonar`](https://github.com/rx-ts/eslint-plugin-sonar)
 
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/rx-ts/tslint-config-eslint/Publish%20package)](https://github.com/rx-ts/tslint-config-eslint/actions?query=workflow%3A%22Publish+package%22)
 [![Codacy Grade](https://img.shields.io/codacy/grade/5c70cd4efc864eb3b344e32be9aecce8)](https://www.codacy.com/app/JounQin/tslint-config-eslint)

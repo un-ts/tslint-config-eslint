@@ -73,7 +73,8 @@ const CORE_REPLACEMENTS = CORE_AS_IS_REPLACEMENTS.reduce(
   },
 )
 
-const ADDITIONAL_AS_IS_REPLACEMENTS = [
+// from `@typescript-eslint/eslint-plugin`
+const ADDITIONAL_TS_AS_IS_REPLACEMENTS = [
   'adjacent-overload-signatures',
   'array-type',
   'ban-ts-ignore',
@@ -101,7 +102,7 @@ const ADDITIONAL_AS_IS_REPLACEMENTS = [
   'use-isnan',
 ]
 
-const ADDITIONAL_REPLACEMENTS = ADDITIONAL_AS_IS_REPLACEMENTS.reduce(
+const ADDITIONAL_TS_REPLACEMENTS = ADDITIONAL_TS_AS_IS_REPLACEMENTS.reduce(
   (rules, rule) => Object.assign(rules, { [rule]: rule }),
   {
     'await-promise': 'await-thenable',
@@ -133,9 +134,18 @@ const ADDITIONAL_REPLACEMENTS = ADDITIONAL_AS_IS_REPLACEMENTS.reduce(
   },
 )
 
+// form `eslint-plugin-deprecation`
+const ADDITIONAL_SONAR_AS_IS_REPLACEMENTS = ['deprecation']
+
+const ADDITIONAL_SONAR_REPLACEMENTS = ADDITIONAL_SONAR_AS_IS_REPLACEMENTS.reduce(
+  (rules, rule) => Object.assign(rules, { [rule]: rule }),
+  {},
+)
+
 const DISABLED_RULES = [
   ...Object.keys(CORE_REPLACEMENTS),
-  ...Object.keys(ADDITIONAL_REPLACEMENTS),
+  ...Object.keys(ADDITIONAL_TS_REPLACEMENTS),
+  ...Object.keys(ADDITIONAL_SONAR_REPLACEMENTS),
 ].reduce(
   (rules, rule) =>
     Object.assign(rules, {
