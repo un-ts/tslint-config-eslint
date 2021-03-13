@@ -26,6 +26,8 @@ You may tried something like [tslint-to-eslint-config](https://github.com/typesc
 - [Usage](#usage)
   - [Install](#install)
   - [Configuration](#configuration)
+    - [Basic config](#basic-config)
+    - [Additional configs](#additional-configs)
 - [Forthcoming](#forthcoming)
 - [Changelog](#changelog)
 - [License](#license)
@@ -44,21 +46,30 @@ npm i -D tslint-config-eslint
 
 ### Configuration
 
-```jsonc
-{
-  "extends": ["your original great configs", "tslint-config-eslint"] // put this config at the last, so it will take highest priority
-}
-```
+#### Basic config
+
+> For `ESLint` core and `@typescript-eslint/eslint-plugin`
 
 ```jsonc
 {
-  "extends": ["your original great configs", "tslint-config-eslint/prettier"] // if you're using tslint with prettier
+  // put this config at the last, so it will take highest priority
+  "extends": ["your original configs", "tslint-config-eslint"]
 }
 ```
 
+#### Additional configs
+
 ```jsonc
 {
-  "extends": ["your original great configs", "tslint-config-eslint/sonar"] // if you're using tslint with eslint-plugin-sonarjs
+  "extends": [
+    "your original configs",
+    // if you're using tslint with `prettier`
+    "tslint-config-eslint/prettier",
+    // if you're using tslint with `eslint-plugin-sonarjs`
+    "tslint-config-eslint/sonarjs",
+    // if you're using tslint with `eslint-plugin-sonar`
+    "tslint-config-eslint/sonar"
+  ]
 }
 ```
 
