@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/rx-ts/tslint-config-eslint/compare/v0.3.0...v0.4.0) (2021-03-13)
+
+
+### Features
+
+* split sonar/sonarjs configs, add more disable rules ([b139d39](https://github.com/rx-ts/tslint-config-eslint/commit/b139d39ffb9c8840ec16509ff87d3ce461a411a2))
+
 ## [0.3.0](https://github.com/rx-ts/tslint-config-eslint/compare/v0.2.2...v0.3.0) (2021-03-02)
 
 

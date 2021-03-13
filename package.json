@@ -1,6 +1,6 @@
 {
   "name": "tslint-config-eslint",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Yet another TSLint Configuration which disables all rules which has been handled by `eslint` or `@typescript-eslint`.",
   "repository": "git@github.com:rx-ts/tslint-config-eslint.git",
   "author": "JounQin <admin@1stg.me>",
@@ -9,7 +9,8 @@
   "files": [
     "base.json",
     "prettier.json",
-    "sonar.json"
+    "sonar.json",
+    "sonarjs.json"
   ],
   "scripts": {
     "build": "ts-node build",
