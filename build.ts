@@ -1,5 +1,13 @@
 import fs from 'fs'
 
+export interface RuleReplacement {
+  [rule: string]: string | string[]
+}
+
+export interface DisabledRules {
+  [rule: string]: false
+}
+
 const CORE_AS_IS_REPLACEMENTS = [
   'curly',
   'no-bitwise',
@@ -28,7 +36,7 @@ const CORE_AS_IS_REPLACEMENTS = [
   'no-irregular-whitespace',
 ]
 
-const CORE_REPLACEMENTS = CORE_AS_IS_REPLACEMENTS.reduce(
+const CORE_REPLACEMENTS = CORE_AS_IS_REPLACEMENTS.reduce<RuleReplacement>(
   (rules, rule) => Object.assign(rules, { [rule]: rule }),
   {
     'no-for-in': 'guard-for-in',
@@ -74,7 +82,7 @@ const CORE_REPLACEMENTS = CORE_AS_IS_REPLACEMENTS.reduce(
 )
 
 // from `@typescript-eslint/eslint-plugin`
-const ADDITIONAL_TS_AS_IS_REPLACEMENTS = [
+const TS_AS_IS_REPLACEMENTS = [
   'adjacent-overload-signatures',
   'array-type',
   'ban-ts-ignore',
@@ -102,8 +110,9 @@ const ADDITIONAL_TS_AS_IS_REPLACEMENTS = [
   'use-isnan',
 ]
 
-const ADDITIONAL_TS_REPLACEMENTS = ADDITIONAL_TS_AS_IS_REPLACEMENTS.reduce(
-  (rules, rule) => Object.assign(rules, { [rule]: rule }),
+const TS_REPLACEMENTS = TS_AS_IS_REPLACEMENTS.reduce<RuleReplacement>(
+  (rules, rule) =>
+    Object.assign(rules, { [rule]: '@typescript-eslint/' + rule }),
   {
     'await-promise': 'await-thenable',
     'class-name': 'class-name-casing',
@@ -134,33 +143,127 @@ const ADDITIONAL_TS_REPLACEMENTS = ADDITIONAL_TS_AS_IS_REPLACEMENTS.reduce(
   },
 )
 
-// form `eslint-plugin-deprecation`
-const ADDITIONAL_SONAR_AS_IS_REPLACEMENTS = ['deprecation']
+const SONARJS_AS_IS_REPLACEMENTS = [
+  'no-all-duplicated-branches',
+  'cognitive-complexity',
+  'max-switch-cases',
+  'no-collapsible-if',
+  'no-collection-size-mischeck',
+  'no-duplicate-string',
+  'no-duplicated-branches',
+  'no-element-overwrite',
+  'no-gratuitous-expressions',
+  'no-identical-conditions',
+  'no-identical-expressions',
+  'no-identical-functions',
+  'no-inverted-boolean-check',
+  'no-redundant-boolean',
+  'no-redundant-jump',
+  'no-small-switch',
+  'no-same-line-conditional',
+  'no-use-of-empty-return-value',
+  'no-useless-catch',
+  'prefer-immediate-return',
+  'prefer-promise-shorthand',
+  'prefer-type-guard',
+]
 
-const ADDITIONAL_SONAR_REPLACEMENTS = ADDITIONAL_SONAR_AS_IS_REPLACEMENTS.reduce(
-  (rules, rule) => Object.assign(rules, { [rule]: rule }),
-  {},
+const SONARJS_REPLACEMENTS = SONARJS_AS_IS_REPLACEMENTS.reduce<RuleReplacement>(
+  (rules, rule) => Object.assign(rules, { [rule]: 'sonarjs/' + rule }),
+  {
+    'no-big-function': [
+      'max-lines-per-function',
+      'sonarjs/sonar-max-lines-per-function',
+    ],
+    'parameters-max-number': 'max-params',
+
+    // core
+    'no-empty-destructuring': 'no-empty-pattern',
+    'no-empty-nested-blocks': 'no-empty',
+    'no-extra-semicolon': 'no-extra-semi',
+    'no-multiline-string-literals': 'no-multi-str',
+    'no-self-assignment': 'no-self-assign',
+    'no-statements-same-line': 'no-same-line-conditional',
+    'no-unconditional-jump': 'no-redundant-jump',
+    'no-unused-array': 'no-unused-collection',
+    'prefer-optional': 'no-redundant-optional',
+
+    // typescript
+    'consecutive-overloads': 'adjacent-overload-signatures',
+    'no-useless-cast': 'no-unnecessary-type-assertion',
+  },
 )
 
-const DISABLED_RULES = [
-  ...Object.keys(CORE_REPLACEMENTS),
-  ...Object.keys(ADDITIONAL_TS_REPLACEMENTS),
-  ...Object.keys(ADDITIONAL_SONAR_REPLACEMENTS),
-].reduce(
-  (rules, rule) =>
-    Object.assign(rules, {
-      [rule]: false,
-    }),
-  {},
+// form `eslint-plugin-sonar`
+const SONAR_AS_IS_REPLACEMENTS = [
+  'arguments-order',
+  'bool-param-default',
+  'deprecation',
+  'max-union-size',
+  'no-accessor-field-mismatch',
+  'no-alphabetical-sort',
+  'no-array-delete',
+  'no-commented-code',
+  'no-dead-store',
+  'no-duplicate-in-composite',
+  'no-hardcoded-credentials',
+  'no-gratuitous-expressions',
+  'no-ignored-return',
+  'no-in-misuse',
+  'no-invalid-await',
+  'no-misleading-array-reverse',
+  'no-nested-incdec',
+  'no-nested-switch',
+  'no-nested-template-literals',
+  'no-redundant-parentheses',
+  'no-return-type-any',
+  'no-try-promise',
+  'no-undefined-argument',
+  'no-unenclosed-multiline-block',
+  'no-unthrown-error',
+  'no-useless-increment',
+  'no-useless-intersection',
+  'no-variable-usage-before-declaration',
+  'use-type-alias',
+]
+
+const SONAR_REPLACEMENTS = SONAR_AS_IS_REPLACEMENTS.reduce<RuleReplacement>(
+  (rules, rule) => Object.assign(rules, { [rule]: 'sonar/' + rule }),
+  {
+    'mccabe-complexity': 'cyclomatic-complexity',
+    'no-empty-array': 'no-empty-collection',
+    'no-ignored-initial-value': 'no-parameter-reassignment',
+    'no-inconsistent-return': 'no-inconsistent-returns',
+    'no-invariant-return': 'no-invariant-returns',
+    'no-misspelled-operator': 'non-existent-operator',
+    'use-primitive-type': 'no-primitive-wrappers',
+  },
 )
 
-fs.writeFileSync(
-  'base.json',
-  JSON.stringify(
-    {
-      rules: DISABLED_RULES,
-    },
-    null,
-    2,
-  ) + '\n',
+const getDisabledRules = (rules: string[] | RuleReplacement) =>
+  (Array.isArray(rules) ? rules : Object.keys(rules)).reduce<DisabledRules>(
+    (acc, rule) =>
+      Object.assign(acc, {
+        [rule]: false,
+      }),
+    {},
+  )
+
+const writeConfig = (config: string, rules: DisabledRules) =>
+  fs.writeFileSync(
+    config + '.json',
+    JSON.stringify(
+      {
+        rules,
+      },
+      null,
+      2,
+    ) + '\n',
+  )
+
+writeConfig(
+  'base',
+  getDisabledRules({ ...CORE_REPLACEMENTS, ...TS_REPLACEMENTS }),
 )
+writeConfig('sonarjs', getDisabledRules(SONARJS_REPLACEMENTS))
+writeConfig('sonar', getDisabledRules(SONAR_REPLACEMENTS))

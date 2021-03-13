@@ -1,6 +1,6 @@
 # tslint-config-eslint
 
-> Yet another TSLint Configuration which disables all rules which has been handled by `eslint`, `@typescript-eslint` or [`eslint-plugin-sonar`](https://github.com/rx-ts/eslint-plugin-sonar)
+> Yet another TSLint Configuration which disables all rules which has been handled by [`eslint`](https://github.com/eslint/eslint), [`@typescript-eslint/eslint-plugin`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin), [`eslint-plugin-sonarjs`](https://github.com/SonarSource/eslint-plugin-sonarjs) or [`eslint-plugin-sonar`](https://github.com/rx-ts/eslint-plugin-sonar).
 
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/rx-ts/tslint-config-eslint/Publish%20package)](https://github.com/rx-ts/tslint-config-eslint/actions?query=workflow%3A%22Publish+package%22)
 [![Codacy Grade](https://img.shields.io/codacy/grade/5c70cd4efc864eb3b344e32be9aecce8)](https://www.codacy.com/app/JounQin/tslint-config-eslint)
@@ -17,7 +17,7 @@
 [![Code Style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![codechecks.io](https://raw.githubusercontent.com/codechecks/docs/master/images/badges/badge-default.svg?sanitize=true)](https://codechecks.io)
 
-[TSLint][] will be [deprecated](https://github.com/palantir/tslint/issues/4534) some time in 2019, but it has not been finished. So maybe you're using [ESLint][] with it together, then it would be terrible to lint codes twice, especially for those rules which has equivalent rules from [ESLint][] or [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin).
+[TSLint][] will be [deprecated](https://github.com/palantir/tslint/issues/4534) some time in 2019, but it has not been finished. So maybe you're using [ESLint][] with it together, then it would be terrible to lint codes twice, especially for those rules which has equivalent rules from [`eslint`](https://github.com/eslint/eslint), [`@typescript-eslint/eslint-plugin`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin), [`eslint-plugin-sonarjs`](https://github.com/SonarSource/eslint-plugin-sonarjs) or [`eslint-plugin-sonar`](https://github.com/rx-ts/eslint-plugin-sonar).
 
 You may tried something like [tslint-to-eslint-config](https://github.com/typescript-eslint/tslint-to-eslint-config) to help you to migrate, while this package/configuration will help you to use [ESLint][] quickly without remove or refactor your original `tslint.json` heavily.
 
