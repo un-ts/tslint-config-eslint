@@ -2,3 +2,5 @@
 .type-coverage
 base.json
 node_modules
+/rules.js
+/rules.d.ts

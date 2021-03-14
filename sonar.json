@@ -1,6 +1,7 @@
 {
   "rules": {
     "mccabe-complexity": false,
+    "no-big-function": false,
     "no-empty-array": false,
     "no-ignored-initial-value": false,
     "no-inconsistent-return": false,
