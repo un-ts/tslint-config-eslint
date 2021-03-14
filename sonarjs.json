@@ -1,4 +1,6 @@
 {
+  "$schema": "http://json.schemastore.org/tslint",
+  "extends": "./base.json",
   "rules": {
     "no-big-function": false,
     "no-empty-destructuring": false,
