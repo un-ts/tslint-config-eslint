@@ -1,6 +1,6 @@
 {
   "name": "tslint-config-eslint",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Yet another TSLint Configuration which disables all rules which has been handled by `eslint` or `@typescript-eslint`.",
   "repository": "git@github.com:rx-ts/tslint-config-eslint.git",
   "author": "JounQin <admin@1stg.me>",
