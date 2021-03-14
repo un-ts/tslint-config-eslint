@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/rx-ts/tslint-config-eslint/compare/v0.4.2...v0.5.0) (2021-03-14)
+
+
+### Features
+
+* add js api support, add rule list into README ([8b6a15b](https://github.com/rx-ts/tslint-config-eslint/commit/8b6a15b653a58e360ef095fe34ed56ced02f276f))
+
 ### [0.4.2](https://github.com/rx-ts/tslint-config-eslint/compare/v0.4.1...v0.4.2) (2021-03-13)
 
 ### [0.4.1](https://github.com/rx-ts/tslint-config-eslint/compare/v0.4.0...v0.4.1) (2021-03-13)
