@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.2](https://github.com/rx-ts/tslint-config-eslint/compare/v0.5.1...v0.5.2) (2021-03-14)
+
+
+### Bug Fixes
+
+* should extends base.json ([b2f9634](https://github.com/rx-ts/tslint-config-eslint/commit/b2f96342b12f0a0fe5d02e21b6180a4b30d0bc41))
+
 ### [0.5.1](https://github.com/rx-ts/tslint-config-eslint/compare/v0.5.0...v0.5.1) (2021-03-14)
 
 ## [0.5.0](https://github.com/rx-ts/tslint-config-eslint/compare/v0.4.2...v0.5.0) (2021-03-14)
