@@ -131,16 +131,16 @@
   resolved "https://registry.yarnpkg.com/@1stg/tsconfig/-/tsconfig-1.2.0.tgz#45f869feaac35f40134ef7318ffadcdfb6eb8b6f"
   integrity sha512-LwIN66KaI3nyI/VPkxHtr1D0K79wWUlee2ceW1HEjxSIDHPZs/WFO3+fHT4N3Hm2YKpQyI9nf+J7ZTEztRwS6g==
 
-"@1stg/tslint-config@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@1stg/tslint-config/-/tslint-config-1.1.0.tgz#727d215443ef73631360b7cdf3cb311b7cc6a107"
-  integrity sha512-aGKR8pTYBcACxQoZTHC9xgznYiTOVmhm4ECFVZ0rsrLfbo8DzI6gntjDOwzjJbFT8mAJ8iTvni7W49k/hJBxpw==
+"@1stg/tslint-config@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@1stg/tslint-config/-/tslint-config-1.2.0.tgz#a60e8734b561ea01310f27daa3abe13052102817"
+  integrity sha512-MKSvpm94RTcHf1oZRfobRVA34HxPZN0tZ+6KMWyaaz336KUrti8InCwJyx2UzB2eoKdexk87wnjkLh9qIhKsXg==
   dependencies:
     "@rxts/rxjs-tslint" "^0.2.1"
     codelyzer "^6.0.1"
     ng-tslint "^1.1.0"
     tslint-angular "^3.0.3"
-    tslint-config-eslint "^0.3.0"
+    tslint-config-eslint "^0.5.2"
     tslint-config-prettier "^1.18.0"
     tslint-plugin-prettier "^3.0.0-beta.0"
     tslint-react "^5.0.0"
@@ -6462,10 +6462,10 @@ tslint-angular@^3.0.3:
   resolved "https://registry.yarnpkg.com/tslint-angular/-/tslint-angular-3.0.3.tgz#872d4fe36497d20582dbe4b8ed3338ff0c922c30"
   integrity sha512-5xD1gLE89lBExfSbMslDw/ZfOZM0t0CJsoJa4svsgF7tlwVS3IpXjzNcNRN0RZqDBj+cdTlbeel6GpZ3PqpPiw==
 
-tslint-config-eslint@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/tslint-config-eslint/-/tslint-config-eslint-0.3.0.tgz#a90cfa50f8a02aa9b85d2de23efe9b812f4fb2ec"
-  integrity sha512-ibq6Od3FOQgcOIoXgQqFze7/Bwu+Bs6KtcBReV+iKRfIQOBUnEfre8bVJaqerXEKjof0ism7JGWrLJ9GNjFaow==
+tslint-config-eslint@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/tslint-config-eslint/-/tslint-config-eslint-0.5.2.tgz#c9c5c3442c3203bb5031b83c2c1bfacf1aeab3fe"
+  integrity sha512-ozsw7WWcOI7mk+dobiXY22qqCnZt6dX3X+Qe0khXjf1/nOO8jLYDx1Ha5/V4ZG9mA9fez79PAPaujkWQq9ci8w==
 
 tslint-config-prettier@^1.18.0:
   version "1.18.0"
