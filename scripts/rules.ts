@@ -20,13 +20,16 @@ const getDisabledRules = (rules: string[] | RuleReplacements) =>
     {},
   )
 
+const SUB_CONFIG_META = {
+  $schema: 'http://json.schemastore.org/tslint',
+  extends: './base.json',
+} as const
+
 const writeConfig = (config: string, rules: DisabledRules) =>
   fs.writeFileSync(
     config + '.json',
     JSON.stringify(
-      {
-        rules,
-      },
+      config === 'base' ? { rules } : { ...SUB_CONFIG_META, rules },
       null,
       2,
     ) + '\n',

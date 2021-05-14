@@ -1,6 +1,10 @@
+*.log
 .*cache
 .type-coverage
-base.json
 node_modules
+/angular.json
+/base.json
 /rules.js
 /rules.d.ts
+/sonar.json
+/sonarjs.json

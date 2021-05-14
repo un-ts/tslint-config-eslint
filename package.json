@@ -6,12 +6,12 @@
   "author": "JounQin <admin@1stg.me>",
   "license": "MIT",
   "main": "base.json",
-  "types": "rules.d.ts",
   "files": [
-    "/rules.d.ts",
-    "/rules.js",
+    "angular.json",
     "base.json",
     "prettier.json",
+    "rules.d.ts",
+    "rules.js",
     "sonar.json",
     "sonarjs.json"
   ],
