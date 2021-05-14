@@ -1,5 +1,5 @@
 export interface RuleReplacements {
-  [rule: string]: string | string[]
+  [rule: string]: string | string[] | null
 }
 
 export interface DisabledRules {
@@ -23,7 +23,7 @@ export const addRulesPrefix = (rules: RuleReplacements, prefix: string) =>
       Object.assign(acc, {
         [oldRule]: Array.isArray(newRule)
           ? newRule.map(rule => addRulePrefix(rule, prefix))
-          : addRulePrefix(newRule, prefix),
+          : newRule && addRulePrefix(newRule, prefix),
       }),
     {},
   )
@@ -103,9 +103,9 @@ export const CORE_REPLACEMENTS =
     },
   )
 
+// from `@typescript-eslint/eslint-plugin`
 export const TS_ESLINT = '@typescript-eslint'
 
-// from `@typescript-eslint/eslint-plugin`
 export const TS_AS_IS_REPLACEMENTS = [
   'adjacent-overload-signatures',
   'array-type',
@@ -233,7 +233,7 @@ export const SONARJS_REPLACEMENTS =
     },
   )
 
-// form `eslint-plugin-sonar`
+// from `eslint-plugin-sonar`
 const SONAR_AS_IS_REPLACEMENTS = [
   'arguments-order',
   'bool-param-default',
@@ -281,4 +281,92 @@ export const SONAR_REPLACEMENTS = addRulesPrefix(
     },
   ),
   'sonar',
+)
+
+// from `@angular-eslint/eslint-plugin`
+export const NG_ESLINT = '@angular-eslint'
+
+export const NG_AS_IS_REPLACEMENTS = [
+  'component-class-suffix',
+  'component-max-inline-declarations',
+  'component-selector',
+  'contextual-decorator',
+  'contextual-lifecycle',
+  'directive-class-suffix',
+  'directive-selector',
+  'no-attribute-decorator',
+  'no-conflicting-lifecycle',
+  'no-forward-ref',
+  'no-host-metadata-property',
+  'no-input-prefix',
+  'no-input-rename',
+  'no-inputs-metadata-property',
+  'no-lifecycle-call',
+  'no-output-native',
+  'no-output-on-prefix',
+  'no-output-rename',
+  'no-outputs-metadata-property',
+  'no-pipe-impure',
+  'no-queries-metadata-property',
+  'pipe-prefix',
+  'prefer-on-push-component-change-detection',
+  'prefer-output-readonly',
+  'relative-url-prefix',
+  'use-component-selector',
+  'use-component-view-encapsulation',
+  'use-injectable-provided-in',
+  'use-lifecycle-interface',
+  'use-pipe-transform-interface',
+]
+
+export const NG_TEMPLATE_REPLACEMENTS = [
+  'accessibility-alt-text',
+  'accessibility-elements-content',
+  'accessibility-label-for',
+  'accessibility-tabindex-no-positive',
+  'accessibility-table-scope',
+  'accessibility-valid-aria',
+  'banana-in-box',
+  'click-events-have-key-events',
+  'conditional-complexity',
+  'cyclomatic-complexity',
+  'i18n',
+  'mouse-events-have-key-events',
+  'no-any',
+  'no-autofocus',
+  'no-call-expression',
+  'no-distracting-elements',
+  'no-negated-async',
+  'use-track-by-function',
+].reduce<RuleReplacements>(
+  (rules, name) =>
+    Object.assign(rules, {
+      [`template-${name}`]: addRulePrefix(name, '@angular-eslint/template'),
+    }),
+  {},
+)
+
+export const CODELYZER_REPLACEMENTS =
+  NG_AS_IS_REPLACEMENTS.reduce<RuleReplacements>(
+    (rules, rule) =>
+      Object.assign(rules, {
+        [rule]: addRulePrefix(rule, NG_ESLINT),
+      }),
+    {
+      ...NG_TEMPLATE_REPLACEMENTS,
+
+      // core
+      'import-destructuring-spacing': 'object-curly-spacing',
+
+      // unnecessary
+      // https://github.com/angular-eslint/angular-eslint/issues/241
+      'use-pipe-decorator': null,
+    },
+  )
+
+export const NG_TSLINT_REPLACEMENTS = addRulesPrefix(
+  {
+    'member-naming': 'naming-convention',
+  },
+  TS_ESLINT,
 )

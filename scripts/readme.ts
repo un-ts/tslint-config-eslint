@@ -3,7 +3,9 @@ import fs from 'fs'
 import prettier from 'prettier'
 
 import {
+  CODELYZER_REPLACEMENTS,
   CORE_REPLACEMENTS,
+  NG_TSLINT_REPLACEMENTS,
   RuleReplacements,
   SONARJS_REPLACEMENTS,
   SONAR_REPLACEMENTS,
@@ -35,7 +37,7 @@ ${Object.entries(replacements)
       oldRule +
       '` | ' +
       arrayify(newRule)
-        .map(rule => '`' + rule + '`')
+        .map(rule => '`' + (rule || 'N/A') + '`')
         .join('<br>'),
   )
   .join('\n')}|
@@ -53,6 +55,14 @@ ${printReplacements({ ...CORE_REPLACEMENTS, ...TS_REPLACEMENTS })}
 ### tslint-sonarts
 
 ${printReplacements({ ...SONARJS_REPLACEMENTS, ...SONAR_REPLACEMENTS })}
+
+### codelyzer
+
+${printReplacements(CODELYZER_REPLACEMENTS)}
+
+### ng-tslint
+
+${printReplacements(NG_TSLINT_REPLACEMENTS)}
 
 ${suffix}`,
     {

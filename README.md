@@ -283,13 +283,73 @@ const {
 | `no-variable-usage-before-declaration` | `sonar/no-variable-usage-before-declaration`          |
 | `use-type-alias`                       | `sonar/use-type-alias`                                |
 
+### codelyzer
+
+| old rule                                      | new rule                                                      |
+| --------------------------------------------- | ------------------------------------------------------------- |
+| `template-accessibility-alt-text`             | `@angular-eslint/template/accessibility-alt-text`             |
+| `template-accessibility-elements-content`     | `@angular-eslint/template/accessibility-elements-content`     |
+| `template-accessibility-label-for`            | `@angular-eslint/template/accessibility-label-for`            |
+| `template-accessibility-tabindex-no-positive` | `@angular-eslint/template/accessibility-tabindex-no-positive` |
+| `template-accessibility-table-scope`          | `@angular-eslint/template/accessibility-table-scope`          |
+| `template-accessibility-valid-aria`           | `@angular-eslint/template/accessibility-valid-aria`           |
+| `template-banana-in-box`                      | `@angular-eslint/template/banana-in-box`                      |
+| `template-click-events-have-key-events`       | `@angular-eslint/template/click-events-have-key-events`       |
+| `template-conditional-complexity`             | `@angular-eslint/template/conditional-complexity`             |
+| `template-cyclomatic-complexity`              | `@angular-eslint/template/cyclomatic-complexity`              |
+| `template-i18n`                               | `@angular-eslint/template/i18n`                               |
+| `template-mouse-events-have-key-events`       | `@angular-eslint/template/mouse-events-have-key-events`       |
+| `template-no-any`                             | `@angular-eslint/template/no-any`                             |
+| `template-no-autofocus`                       | `@angular-eslint/template/no-autofocus`                       |
+| `template-no-call-expression`                 | `@angular-eslint/template/no-call-expression`                 |
+| `template-no-distracting-elements`            | `@angular-eslint/template/no-distracting-elements`            |
+| `template-no-negated-async`                   | `@angular-eslint/template/no-negated-async`                   |
+| `template-use-track-by-function`              | `@angular-eslint/template/use-track-by-function`              |
+| `import-destructuring-spacing`                | `object-curly-spacing`                                        |
+| `use-pipe-decorator`                          | `N/A`                                                         |
+| `component-class-suffix`                      | `@angular-eslint/component-class-suffix`                      |
+| `component-max-inline-declarations`           | `@angular-eslint/component-max-inline-declarations`           |
+| `component-selector`                          | `@angular-eslint/component-selector`                          |
+| `contextual-decorator`                        | `@angular-eslint/contextual-decorator`                        |
+| `contextual-lifecycle`                        | `@angular-eslint/contextual-lifecycle`                        |
+| `directive-class-suffix`                      | `@angular-eslint/directive-class-suffix`                      |
+| `directive-selector`                          | `@angular-eslint/directive-selector`                          |
+| `no-attribute-decorator`                      | `@angular-eslint/no-attribute-decorator`                      |
+| `no-conflicting-lifecycle`                    | `@angular-eslint/no-conflicting-lifecycle`                    |
+| `no-forward-ref`                              | `@angular-eslint/no-forward-ref`                              |
+| `no-host-metadata-property`                   | `@angular-eslint/no-host-metadata-property`                   |
+| `no-input-prefix`                             | `@angular-eslint/no-input-prefix`                             |
+| `no-input-rename`                             | `@angular-eslint/no-input-rename`                             |
+| `no-inputs-metadata-property`                 | `@angular-eslint/no-inputs-metadata-property`                 |
+| `no-lifecycle-call`                           | `@angular-eslint/no-lifecycle-call`                           |
+| `no-output-native`                            | `@angular-eslint/no-output-native`                            |
+| `no-output-on-prefix`                         | `@angular-eslint/no-output-on-prefix`                         |
+| `no-output-rename`                            | `@angular-eslint/no-output-rename`                            |
+| `no-outputs-metadata-property`                | `@angular-eslint/no-outputs-metadata-property`                |
+| `no-pipe-impure`                              | `@angular-eslint/no-pipe-impure`                              |
+| `no-queries-metadata-property`                | `@angular-eslint/no-queries-metadata-property`                |
+| `pipe-prefix`                                 | `@angular-eslint/pipe-prefix`                                 |
+| `prefer-on-push-component-change-detection`   | `@angular-eslint/prefer-on-push-component-change-detection`   |
+| `prefer-output-readonly`                      | `@angular-eslint/prefer-output-readonly`                      |
+| `relative-url-prefix`                         | `@angular-eslint/relative-url-prefix`                         |
+| `use-component-selector`                      | `@angular-eslint/use-component-selector`                      |
+| `use-component-view-encapsulation`            | `@angular-eslint/use-component-view-encapsulation`            |
+| `use-injectable-provided-in`                  | `@angular-eslint/use-injectable-provided-in`                  |
+| `use-lifecycle-interface`                     | `@angular-eslint/use-lifecycle-interface`                     |
+| `use-pipe-transform-interface`                | `@angular-eslint/use-pipe-transform-interface`                |
+
+### ng-tslint
+
+| old rule        | new rule                               |
+| --------------- | -------------------------------------- |
+| `member-naming` | `@typescript-eslint/naming-convention` |
+
 <!-- suffix placeholder -->
 
 ## Forthcoming
 
 Forthcoming configs include:
 
-- [ ] Angular, disable replaceable [tslint-angular](https://github.com/mgechev/tslint-angular#readme) rules in favor of [angular-eslint](https://github.com/angular-eslint/angular-eslint)
 - [ ] React, disable replaceable [tslint-react](https://github.com/palantir/tslint-react) rules in favor of [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react)
 
 ## Changelog

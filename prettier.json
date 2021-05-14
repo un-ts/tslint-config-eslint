@@ -2,6 +2,9 @@
   "$schema": "http://json.schemastore.org/tslint",
   "extends": "./base.json",
   "rules": {
-    "prettier": false
+    "prettier": false,
+    "angular-whitespace": false,
+    "no-import-export-spacing": false,
+    "prefer-inline-decorator": false
   }
 }
