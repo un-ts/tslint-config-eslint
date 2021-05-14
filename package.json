@@ -2,7 +2,7 @@
   "name": "tslint-config-eslint",
   "version": "0.5.2",
   "description": "Yet another TSLint Configuration which disables all rules which has been handled by `eslint` or `@typescript-eslint`.",
-  "repository": "git@github.com:rx-ts/tslint-config-eslint.git",
+  "repository": "git+https://github.com/rx-ts/tslint-config-eslint.git",
   "author": "JounQin <admin@1stg.me>",
   "license": "MIT",
   "main": "base.json",
@@ -21,34 +21,44 @@
     "build:rules": "ts-node scripts/rules",
     "build:tsc": "tsc --declaration rules.ts",
     "lint": "run-p lint:*",
-    "lint:es": "cross-env PARSER_NO_WATCH=true eslint . --cache --ext js,md,ts -f friendly",
+    "lint:es": "eslint . --cache -f friendly",
     "lint:ts": "tslint -p . -t stylish",
     "lint:tsc": "tsc --noEmit",
-    "release": "standard-version -a --release-as",
+    "prepare": "simple-git-hooks && yarn-deduplicate --strategy fewer || exit 0",
+    "release": "clean-publish && changeset publish",
     "typecov": "type-coverage"
   },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": ">=3.0.0",
-    "eslint-plugin-sonar": "^0.2.0",
+    "eslint-plugin-sonar": ">=0.5.0",
+    "eslint-plugin-sonarjs": ">=0.7.0",
     "tslint": ">=5.0.0",
     "typescript": ">=3.0.0"
   },
+  "peerDependenciesMeta": {
+    "eslint-plugin-sonar": {
+      "optional": true
+    },
+    "eslint-plugin-sonarjs": {
+      "optional": true
+    }
+  },
   "devDependencies": {
-    "@1stg/common-config": "^1.2.10",
-    "@1stg/tslint-config": "^1.1.0",
-    "@types/node": "^14.14.34",
-    "@types/prettier": "^2.2.2",
-    "npm-run-all": "^4.1.5",
-    "standard-version": "^9.1.1",
+    "@1stg/common-config": "^2.0.0",
+    "@1stg/tslint-config": "^1.3.0",
+    "@changesets/changelog-github": "^0.4.0",
+    "@changesets/cli": "^2.16.0",
+    "@types/node": "^15.0.3",
+    "@types/prettier": "^2.2.3",
+    "clean-publish": "^2.2.0",
     "ts-node": "^9.1.1",
     "tslint": "^6.1.3",
-    "type-coverage": "^2.16.3",
-    "typescript": "^4.2.3",
-    "yarn-deduplicate": "^3.1.0"
+    "type-coverage": "^2.17.5",
+    "typescript": "^4.2.4"
   },
   "resolutions": {
-    "prettier": "^2.2.1",
-    "tslib": "^2.1.0"
+    "prettier": "^2.3.0",
+    "tslib": "^2.2.0"
   },
   "typeCoverage": {
     "atLeast": 100,

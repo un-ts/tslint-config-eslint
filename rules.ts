@@ -57,50 +57,51 @@ export const CORE_AS_IS_REPLACEMENTS = [
   'no-irregular-whitespace',
 ]
 
-export const CORE_REPLACEMENTS = CORE_AS_IS_REPLACEMENTS.reduce<RuleReplacements>(
-  (rules, rule) => Object.assign(rules, { [rule]: rule }),
-  {
-    'no-for-in': 'guard-for-in',
-    'no-param-reassign': 'no-parameter-reassignment',
-    'ban-comma-operator': 'no-sequences',
-    forin: 'guard-for-in',
-    'function-constructor': 'no-new-func',
-    'import-blacklist': 'no-restricted-imports',
-    'label-position': 'no-extra-label',
-    'no-arg': 'no-caller',
-    'no-conditional-assignment': 'no-cond-assign',
-    'no-duplicate-super': 'constructor-super',
-    'no-duplicate-switch-case': 'no-duplicate-case',
-    'no-duplicate-variable': ['no-redeclare', 'no-dupe-args'],
-    'no-invalid-template-strings': 'no-template-curly-in-string',
-    'no-shadowed-variable': 'no-shadow',
-    'no-string-throw': 'no-throw-literal',
-    'no-submodule-imports': 'no-restricted-imports',
-    'no-switch-case-fall-through': 'no-fallthrough',
-    'no-unused-expression': 'no-unused-expressions',
-    'no-var-keyword': 'no-var',
-    'prefer-conditional-expression': 'no-cond-assign',
-    'switch-default': 'default-case',
-    'triple-equals': 'eqeqeq',
-    'typeof-compare': 'valid-typeof',
-    'completed-docs': 'valid-jsdoc',
-    'cyclomatic-complexity': 'complexity',
-    'max-file-line-count': 'max-lines',
-    'object-literal-sort-keys': 'sort-keys',
-    'object-literal-key-quotes': 'quote-props',
-    'object-literal-shorthand': 'object-shorthand',
-    'one-variable-per-declaration': 'one-var',
-    'prefer-default-last': 'default-case-last',
-    'prefer-function-over-method': 'class-methods-use-this',
-    'space-within-parens': 'space-in-parens',
-    'unnecessary-else': 'no-else-return',
-    'max-line-length': 'max-len',
-    'no-consecutive-blank-lines': 'no-multiple-empty-lines',
-    'no-trailing-whitespace': 'no-trailing-spaces',
-    quotemark: 'quotes',
-    'trailing-comma': 'comma-dangle',
-  },
-)
+export const CORE_REPLACEMENTS =
+  CORE_AS_IS_REPLACEMENTS.reduce<RuleReplacements>(
+    (rules, rule) => Object.assign(rules, { [rule]: rule }),
+    {
+      'no-for-in': 'guard-for-in',
+      'no-param-reassign': 'no-parameter-reassignment',
+      'ban-comma-operator': 'no-sequences',
+      forin: 'guard-for-in',
+      'function-constructor': 'no-new-func',
+      'import-blacklist': 'no-restricted-imports',
+      'label-position': 'no-extra-label',
+      'no-arg': 'no-caller',
+      'no-conditional-assignment': 'no-cond-assign',
+      'no-duplicate-super': 'constructor-super',
+      'no-duplicate-switch-case': 'no-duplicate-case',
+      'no-duplicate-variable': ['no-redeclare', 'no-dupe-args'],
+      'no-invalid-template-strings': 'no-template-curly-in-string',
+      'no-shadowed-variable': 'no-shadow',
+      'no-string-throw': 'no-throw-literal',
+      'no-submodule-imports': 'no-restricted-imports',
+      'no-switch-case-fall-through': 'no-fallthrough',
+      'no-unused-expression': 'no-unused-expressions',
+      'no-var-keyword': 'no-var',
+      'prefer-conditional-expression': 'no-cond-assign',
+      'switch-default': 'default-case',
+      'triple-equals': 'eqeqeq',
+      'typeof-compare': 'valid-typeof',
+      'completed-docs': 'valid-jsdoc',
+      'cyclomatic-complexity': 'complexity',
+      'max-file-line-count': 'max-lines',
+      'object-literal-sort-keys': 'sort-keys',
+      'object-literal-key-quotes': 'quote-props',
+      'object-literal-shorthand': 'object-shorthand',
+      'one-variable-per-declaration': 'one-var',
+      'prefer-default-last': 'default-case-last',
+      'prefer-function-over-method': 'class-methods-use-this',
+      'space-within-parens': 'space-in-parens',
+      'unnecessary-else': 'no-else-return',
+      'max-line-length': 'max-len',
+      'no-consecutive-blank-lines': 'no-multiple-empty-lines',
+      'no-trailing-whitespace': 'no-trailing-spaces',
+      quotemark: 'quotes',
+      'trailing-comma': 'comma-dangle',
+    },
+  )
 
 export const TS_ESLINT = '@typescript-eslint'
 
@@ -198,38 +199,39 @@ export const SONARJS_AS_IS_REPLACEMENTS = [
   'prefer-type-guard',
 ]
 
-export const SONARJS_REPLACEMENTS = SONARJS_AS_IS_REPLACEMENTS.reduce<RuleReplacements>(
-  (rules, rule) =>
-    Object.assign(rules, { [rule]: addRulePrefix(rule, 'sonarjs') }),
-  {
-    // core
-    'no-big-function': 'max-lines-per-function',
-    'no-empty-destructuring': 'no-empty-pattern',
-    'no-empty-nested-blocks': 'no-empty',
-    'no-multiline-string-literals': 'no-multi-str',
-    'no-self-assignment': 'no-self-assign',
-    'no-statements-same-line': 'no-same-line-conditional',
-    'no-unconditional-jump': 'no-redundant-jump',
-    'no-unused-array': 'no-unused-collection',
-    'parameters-max-number': 'max-params',
-    'prefer-optional': 'no-redundant-optional',
+export const SONARJS_REPLACEMENTS =
+  SONARJS_AS_IS_REPLACEMENTS.reduce<RuleReplacements>(
+    (rules, rule) =>
+      Object.assign(rules, { [rule]: addRulePrefix(rule, 'sonarjs') }),
+    {
+      // core
+      'no-big-function': 'max-lines-per-function',
+      'no-empty-destructuring': 'no-empty-pattern',
+      'no-empty-nested-blocks': 'no-empty',
+      'no-multiline-string-literals': 'no-multi-str',
+      'no-self-assignment': 'no-self-assign',
+      'no-statements-same-line': 'no-same-line-conditional',
+      'no-unconditional-jump': 'no-redundant-jump',
+      'no-unused-array': 'no-unused-collection',
+      'parameters-max-number': 'max-params',
+      'prefer-optional': 'no-redundant-optional',
 
-    // typescript
-    ...addRulesPrefix(
-      {
-        'consecutive-overloads': 'adjacent-overload-signatures',
-        'no-useless-cast': 'no-unnecessary-type-assertion',
-      },
-      TS_ESLINT,
-    ),
+      // typescript
+      ...addRulesPrefix(
+        {
+          'consecutive-overloads': 'adjacent-overload-signatures',
+          'no-useless-cast': 'no-unnecessary-type-assertion',
+        },
+        TS_ESLINT,
+      ),
 
-    // mixed
-    'no-extra-semicolon': [
-      'no-extra-semi',
-      addRulePrefix('no-extra-semi', TS_ESLINT),
-    ],
-  },
-)
+      // mixed
+      'no-extra-semicolon': [
+        'no-extra-semi',
+        addRulePrefix('no-extra-semi', TS_ESLINT),
+      ],
+    },
+  )
 
 // form `eslint-plugin-sonar`
 const SONAR_AS_IS_REPLACEMENTS = [
