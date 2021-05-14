@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.6.1
+
+### Patch Changes
+
+- [#162](https://github.com/rx-ts/tslint-config-eslint/pull/162) [`319ebe5`](https://github.com/rx-ts/tslint-config-eslint/commit/319ebe5b5129846b961b6a862edb41bf44b11935) Thanks [@JounQin](https://github.com/JounQin)! - fix: add missing angular.json into npm
+
 ## 0.6.0
 
 ### Minor Changes
