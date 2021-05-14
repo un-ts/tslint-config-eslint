@@ -24,11 +24,13 @@
     "lint:es": "eslint . --cache -f friendly",
     "lint:ts": "tslint -p . -t stylish",
     "lint:tsc": "tsc --noEmit",
+    "prebuild": "rimraf rules.{d.ts,js}",
     "prepare": "simple-git-hooks && yarn-deduplicate --strategy fewer || exit 0",
     "release": "clean-publish && changeset publish",
     "typecov": "type-coverage"
   },
   "peerDependencies": {
+    "@angular-eslint/eslint-plugin": "^12.0.0",
     "@typescript-eslint/eslint-plugin": ">=3.0.0",
     "eslint-plugin-sonar": ">=0.5.0",
     "eslint-plugin-sonarjs": ">=0.7.0",
@@ -36,6 +38,9 @@
     "typescript": ">=3.0.0"
   },
   "peerDependenciesMeta": {
+    "@angular-eslint/eslint-plugin": {
+      "optional": true
+    },
     "eslint-plugin-sonar": {
       "optional": true
     },
@@ -51,6 +56,7 @@
     "@types/node": "^15.0.3",
     "@types/prettier": "^2.2.3",
     "clean-publish": "^2.2.0",
+    "rimraf": "^3.0.2",
     "ts-node": "^9.1.1",
     "tslint": "^6.1.3",
     "type-coverage": "^2.17.5",

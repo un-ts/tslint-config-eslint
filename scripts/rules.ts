@@ -1,8 +1,10 @@
 import fs from 'fs'
 
 import {
+  CODELYZER_REPLACEMENTS,
   CORE_REPLACEMENTS,
   DisabledRules,
+  NG_TSLINT_REPLACEMENTS,
   RuleReplacements,
   SONARJS_REPLACEMENTS,
   SONAR_REPLACEMENTS,
@@ -34,5 +36,10 @@ writeConfig(
   'base',
   getDisabledRules({ ...CORE_REPLACEMENTS, ...TS_REPLACEMENTS }),
 )
+
+writeConfig('angular', {
+  ...getDisabledRules(CODELYZER_REPLACEMENTS),
+  ...getDisabledRules(NG_TSLINT_REPLACEMENTS),
+})
 writeConfig('sonarjs', getDisabledRules(SONARJS_REPLACEMENTS))
 writeConfig('sonar', getDisabledRules(SONAR_REPLACEMENTS))

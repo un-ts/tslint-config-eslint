@@ -1,7 +1,5 @@
 # tslint-config-eslint
 
-> Yet another TSLint Configuration which disables all rules which has been handled by [`eslint`](https://github.com/eslint/eslint), [`@typescript-eslint/eslint-plugin`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin), [`eslint-plugin-sonarjs`](https://github.com/SonarSource/eslint-plugin-sonarjs) or [`eslint-plugin-sonar`](https://github.com/rx-ts/eslint-plugin-sonar).
-
 [![GitHub Workflow Status](https://github.com/rx-ts/tslint-config-eslint/workflows/CI/badge.svg)](https://github.com/rx-ts/tslint-config-eslint/actions/workflows/ci.yml)
 [![Codacy Grade](https://img.shields.io/codacy/grade/5c70cd4efc864eb3b344e32be9aecce8)](https://www.codacy.com/app/JounQin/tslint-config-eslint)
 [![type-coverage](https://img.shields.io/badge/dynamic/json.svg?label=type-coverage&prefix=%E2%89%A5&suffix=%&query=$.typeCoverage.atLeast&uri=https%3A%2F%2Fraw.githubusercontent.com%2Frx-ts%2Ftslint-config-eslint%2Fmaster%2Fpackage.json)](https://github.com/plantain-00/type-coverage)
@@ -17,7 +15,11 @@
 [![Code Style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![changesets](https://img.shields.io/badge/maintained%20with-changesets-176de3.svg)](https://github.com/atlassian/changesets)
 
-[TSLint][] will be [deprecated](https://github.com/palantir/tslint/issues/4534) some time in 2019, but it has not been finished. So maybe you're using [ESLint][] with it together, then it would be terrible to lint codes twice, especially for those rules which has equivalent rules from [`eslint`](https://github.com/eslint/eslint), [`@typescript-eslint/eslint-plugin`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin), [`eslint-plugin-sonarjs`](https://github.com/SonarSource/eslint-plugin-sonarjs) or [`eslint-plugin-sonar`](https://github.com/rx-ts/eslint-plugin-sonar).
+> Yet another TSLint Configuration which disables all rules which has been handled by [`eslint`](https://github.com/eslint/eslint), [`@typescript-eslint/eslint-plugin`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin), [`eslint-plugin-sonarjs`](https://github.com/SonarSource/eslint-plugin-sonarjs) or [`eslint-plugin-sonar`](https://github.com/rx-ts/eslint-plugin-sonar).
+
+[TSLint][] will be [deprecated](https://github.com/palantir/tslint/issues/4534) some time in 2019, but it has not been finished. So maybe you're using [ESLint][] with it together, then it would be terrible to lint codes twice, especially for those rules which has equivalent rules from [`eslint`](https://github.com/eslint/eslint), [`@typescript-eslint`](https://github.com/typescript-eslint/typescript-eslint), [`eslint-plugin-sonarjs`](https://github.com/SonarSource/eslint-plugin-sonarjs) or [`eslint-plugin-sonar`](https://github.com/rx-ts/eslint-plugin-sonar).
+
+And also [`@angular-eslint`](https://github.com/angular-eslint/angular-eslint) for Angular.
 
 You may tried something like [tslint-to-eslint-config](https://github.com/typescript-eslint/tslint-to-eslint-config) to help you to migrate, while this package/configuration will help you to use [ESLint][] quickly without remove or refactor your original `tslint.json` heavily.
 
@@ -32,6 +34,8 @@ You may tried something like [tslint-to-eslint-config](https://github.com/typesc
 - [Rules List](#rules-list)
   - [tslint core](#tslint-core)
   - [tslint-sonarts](#tslint-sonarts)
+  - [codelyzer](#codelyzer)
+  - [ng-tslint](#ng-tslint)
 - [Forthcoming](#forthcoming)
 - [Changelog](#changelog)
 - [License](#license)
@@ -283,13 +287,73 @@ const {
 | `no-variable-usage-before-declaration` | `sonar/no-variable-usage-before-declaration`          |
 | `use-type-alias`                       | `sonar/use-type-alias`                                |
 
+### codelyzer
+
+| old rule                                      | new rule                                                      |
+| --------------------------------------------- | ------------------------------------------------------------- |
+| `template-accessibility-alt-text`             | `@angular-eslint/template/accessibility-alt-text`             |
+| `template-accessibility-elements-content`     | `@angular-eslint/template/accessibility-elements-content`     |
+| `template-accessibility-label-for`            | `@angular-eslint/template/accessibility-label-for`            |
+| `template-accessibility-tabindex-no-positive` | `@angular-eslint/template/accessibility-tabindex-no-positive` |
+| `template-accessibility-table-scope`          | `@angular-eslint/template/accessibility-table-scope`          |
+| `template-accessibility-valid-aria`           | `@angular-eslint/template/accessibility-valid-aria`           |
+| `template-banana-in-box`                      | `@angular-eslint/template/banana-in-box`                      |
+| `template-click-events-have-key-events`       | `@angular-eslint/template/click-events-have-key-events`       |
+| `template-conditional-complexity`             | `@angular-eslint/template/conditional-complexity`             |
+| `template-cyclomatic-complexity`              | `@angular-eslint/template/cyclomatic-complexity`              |
+| `template-i18n`                               | `@angular-eslint/template/i18n`                               |
+| `template-mouse-events-have-key-events`       | `@angular-eslint/template/mouse-events-have-key-events`       |
+| `template-no-any`                             | `@angular-eslint/template/no-any`                             |
+| `template-no-autofocus`                       | `@angular-eslint/template/no-autofocus`                       |
+| `template-no-call-expression`                 | `@angular-eslint/template/no-call-expression`                 |
+| `template-no-distracting-elements`            | `@angular-eslint/template/no-distracting-elements`            |
+| `template-no-negated-async`                   | `@angular-eslint/template/no-negated-async`                   |
+| `template-use-track-by-function`              | `@angular-eslint/template/use-track-by-function`              |
+| `import-destructuring-spacing`                | `object-curly-spacing`                                        |
+| `use-pipe-decorator`                          | `N/A`                                                         |
+| `component-class-suffix`                      | `@angular-eslint/component-class-suffix`                      |
+| `component-max-inline-declarations`           | `@angular-eslint/component-max-inline-declarations`           |
+| `component-selector`                          | `@angular-eslint/component-selector`                          |
+| `contextual-decorator`                        | `@angular-eslint/contextual-decorator`                        |
+| `contextual-lifecycle`                        | `@angular-eslint/contextual-lifecycle`                        |
+| `directive-class-suffix`                      | `@angular-eslint/directive-class-suffix`                      |
+| `directive-selector`                          | `@angular-eslint/directive-selector`                          |
+| `no-attribute-decorator`                      | `@angular-eslint/no-attribute-decorator`                      |
+| `no-conflicting-lifecycle`                    | `@angular-eslint/no-conflicting-lifecycle`                    |
+| `no-forward-ref`                              | `@angular-eslint/no-forward-ref`                              |
+| `no-host-metadata-property`                   | `@angular-eslint/no-host-metadata-property`                   |
+| `no-input-prefix`                             | `@angular-eslint/no-input-prefix`                             |
+| `no-input-rename`                             | `@angular-eslint/no-input-rename`                             |
+| `no-inputs-metadata-property`                 | `@angular-eslint/no-inputs-metadata-property`                 |
+| `no-lifecycle-call`                           | `@angular-eslint/no-lifecycle-call`                           |
+| `no-output-native`                            | `@angular-eslint/no-output-native`                            |
+| `no-output-on-prefix`                         | `@angular-eslint/no-output-on-prefix`                         |
+| `no-output-rename`                            | `@angular-eslint/no-output-rename`                            |
+| `no-outputs-metadata-property`                | `@angular-eslint/no-outputs-metadata-property`                |
+| `no-pipe-impure`                              | `@angular-eslint/no-pipe-impure`                              |
+| `no-queries-metadata-property`                | `@angular-eslint/no-queries-metadata-property`                |
+| `pipe-prefix`                                 | `@angular-eslint/pipe-prefix`                                 |
+| `prefer-on-push-component-change-detection`   | `@angular-eslint/prefer-on-push-component-change-detection`   |
+| `prefer-output-readonly`                      | `@angular-eslint/prefer-output-readonly`                      |
+| `relative-url-prefix`                         | `@angular-eslint/relative-url-prefix`                         |
+| `use-component-selector`                      | `@angular-eslint/use-component-selector`                      |
+| `use-component-view-encapsulation`            | `@angular-eslint/use-component-view-encapsulation`            |
+| `use-injectable-provided-in`                  | `@angular-eslint/use-injectable-provided-in`                  |
+| `use-lifecycle-interface`                     | `@angular-eslint/use-lifecycle-interface`                     |
+| `use-pipe-transform-interface`                | `@angular-eslint/use-pipe-transform-interface`                |
+
+### ng-tslint
+
+| old rule        | new rule                               |
+| --------------- | -------------------------------------- |
+| `member-naming` | `@typescript-eslint/naming-convention` |
+
 <!-- suffix placeholder -->
 
 ## Forthcoming
 
 Forthcoming configs include:
 
-- [ ] Angular, disable replaceable [tslint-angular](https://github.com/mgechev/tslint-angular#readme) rules in favor of [angular-eslint](https://github.com/angular-eslint/angular-eslint)
 - [ ] React, disable replaceable [tslint-react](https://github.com/palantir/tslint-react) rules in favor of [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react)
 
 ## Changelog
