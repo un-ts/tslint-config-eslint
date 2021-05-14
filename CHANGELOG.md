@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.6.2
+
+### Patch Changes
+
+- [#164](https://github.com/rx-ts/tslint-config-eslint/pull/164) [`65d76d6`](https://github.com/rx-ts/tslint-config-eslint/commit/65d76d62972f36ae9547ff471dba26c5a59b878a) Thanks [@JounQin](https://github.com/JounQin)! - ci: run build before release
+
 ## 0.6.1
 
 ### Patch Changes
