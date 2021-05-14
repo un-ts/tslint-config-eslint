@@ -6,8 +6,6 @@
 
 - [`5029b81`](https://github.com/rx-ts/tslint-config-eslint/commit/5029b81e2f7cfffdc946a819be480c4b4008b7bf) Thanks [@JounQin](https://github.com/JounQin)! - feat: replace codelyzer and ng-tslint with @angular-eslint
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
-
 ### [0.5.2](https://github.com/rx-ts/tslint-config-eslint/compare/v0.5.1...v0.5.2) (2021-03-14)
 
 ### Bug Fixes
