@@ -15,7 +15,7 @@
 [![Code Style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![changesets](https://img.shields.io/badge/maintained%20with-changesets-176de3.svg)](https://github.com/atlassian/changesets)
 
-> Yet another TSLint Configuration which disables all rules which has been handled by [`eslint`](https://github.com/eslint/eslint), [`@typescript-eslint/eslint-plugin`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin), [`eslint-plugin-sonarjs`](https://github.com/SonarSource/eslint-plugin-sonarjs) or [`eslint-plugin-sonar`](https://github.com/rx-ts/eslint-plugin-sonar).
+> Yet another TSLint Configuration which disables all rules which has been handled by [`eslint`](https://github.com/eslint/eslint), [`@typescript-eslint`](https://github.com/typescript-eslint/typescript-eslint), [`eslint-plugin-sonarjs`](https://github.com/SonarSource/eslint-plugin-sonarjs) or [`eslint-plugin-sonar`](https://github.com/rx-ts/eslint-plugin-sonar), etc.
 
 [TSLint][] will be [deprecated](https://github.com/palantir/tslint/issues/4534) some time in 2019, but it has not been finished. So maybe you're using [ESLint][] with it together, then it would be terrible to lint codes twice, especially for those rules which has equivalent rules from [`eslint`](https://github.com/eslint/eslint), [`@typescript-eslint`](https://github.com/typescript-eslint/typescript-eslint), [`eslint-plugin-sonarjs`](https://github.com/SonarSource/eslint-plugin-sonarjs) or [`eslint-plugin-sonar`](https://github.com/rx-ts/eslint-plugin-sonar).
 
@@ -77,6 +77,8 @@ npm i -D tslint-config-eslint
     "tslint-config-eslint/sonarjs",
     // if you're using tslint with `eslint-plugin-sonar`
     "tslint-config-eslint/sonar"
+    // if you're using tslint with `@angular-eslint`
+    "tslint-config-eslint/angular"
   ]
 }
 ```
@@ -89,6 +91,8 @@ const {
   TS_REPLACEMENTS,
   SONARJS_REPLACEMENTS,
   SONAR_REPLACEMENTS,
+  CODELYZER_REPLACEMENTS,
+  NG_TSLINT_REPLACEMENTS,
 } = require('tslint-config-eslint/rules')
 ```
 
