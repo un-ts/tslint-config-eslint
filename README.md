@@ -17,7 +17,9 @@
 [![Code Style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![changesets](https://img.shields.io/badge/maintained%20with-changesets-176de3.svg)](https://github.com/atlassian/changesets)
 
-[TSLint][] will be [deprecated](https://github.com/palantir/tslint/issues/4534) some time in 2019, but it has not been finished. So maybe you're using [ESLint][] with it together, then it would be terrible to lint codes twice, especially for those rules which has equivalent rules from [`eslint`](https://github.com/eslint/eslint), [`@typescript-eslint/eslint-plugin`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin), [`eslint-plugin-sonarjs`](https://github.com/SonarSource/eslint-plugin-sonarjs) or [`eslint-plugin-sonar`](https://github.com/rx-ts/eslint-plugin-sonar).
+[TSLint][] will be [deprecated](https://github.com/palantir/tslint/issues/4534) some time in 2019, but it has not been finished. So maybe you're using [ESLint][] with it together, then it would be terrible to lint codes twice, especially for those rules which has equivalent rules from [`eslint`](https://github.com/eslint/eslint), [`@typescript-eslint`](https://github.com/typescript-eslint/typescript-eslint), [`eslint-plugin-sonarjs`](https://github.com/SonarSource/eslint-plugin-sonarjs) or [`eslint-plugin-sonar`](https://github.com/rx-ts/eslint-plugin-sonar).
+
+And also [`@angular-eslint`](https://github.com/angular-eslint/angular-eslint) for Angular.
 
 You may tried something like [tslint-to-eslint-config](https://github.com/typescript-eslint/tslint-to-eslint-config) to help you to migrate, while this package/configuration will help you to use [ESLint][] quickly without remove or refactor your original `tslint.json` heavily.
 
@@ -32,6 +34,8 @@ You may tried something like [tslint-to-eslint-config](https://github.com/typesc
 - [Rules List](#rules-list)
   - [tslint core](#tslint-core)
   - [tslint-sonarts](#tslint-sonarts)
+  - [codelyzer](#codelyzer)
+  - [ng-tslint](#ng-tslint)
 - [Forthcoming](#forthcoming)
 - [Changelog](#changelog)
 - [License](#license)

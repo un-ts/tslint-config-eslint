@@ -174,6 +174,7 @@ export const TS_REPLACEMENTS = TS_AS_IS_REPLACEMENTS.reduce<RuleReplacements>(
   },
 )
 
+// from `eslint-plugin-sonarjs`
 export const SONARJS_AS_IS_REPLACEMENTS = [
   'no-all-duplicated-branches',
   'cognitive-complexity',
