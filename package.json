@@ -26,6 +26,7 @@
     "lint:tsc": "tsc --noEmit",
     "prebuild": "rimraf rules.{d.ts,js}",
     "prepare": "simple-git-hooks && yarn-deduplicate --strategy fewer || exit 0",
+    "prerelease": "npm run build",
     "release": "clean-publish && changeset publish",
     "typecov": "type-coverage"
   },
