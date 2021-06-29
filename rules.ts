@@ -1,5 +1,5 @@
 export interface RuleReplacements {
-  [rule: string]: string | string[] | null
+  [rule: string]: string[] | string | null
 }
 
 export interface DisabledRules {

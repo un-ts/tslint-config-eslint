@@ -11,7 +11,7 @@ import {
   TS_REPLACEMENTS,
 } from '../rules'
 
-const getDisabledRules = (rules: string[] | RuleReplacements) =>
+const getDisabledRules = (rules: RuleReplacements | string[]) =>
   (Array.isArray(rules) ? rules : Object.keys(rules)).reduce<DisabledRules>(
     (acc, rule) =>
       Object.assign(acc, {
