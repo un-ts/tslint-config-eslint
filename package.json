@@ -31,7 +31,7 @@
     "typecov": "type-coverage"
   },
   "peerDependencies": {
-    "@angular-eslint/eslint-plugin": "^12.5.0",
+    "@angular-eslint/eslint-plugin": "^12.6.1",
     "@typescript-eslint/eslint-plugin": ">=3.10.1",
     "eslint-plugin-sonar": ">=0.6.1",
     "eslint-plugin-sonarjs": ">=0.10.0",
