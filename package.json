@@ -65,7 +65,7 @@
   },
   "resolutions": {
     "prettier": "^2.6.2",
-    "tslib": "^2.3.1"
+    "tslib": "^2.4.0"
   },
   "typeCoverage": {
     "atLeast": 100,
