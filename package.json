@@ -55,7 +55,7 @@
     "@changesets/changelog-github": "^0.4.4",
     "@changesets/cli": "^2.22.0",
     "@types/node": "^15.12.5",
-    "@types/prettier": "^2.4.4",
+    "@types/prettier": "^2.6.0",
     "clean-publish": "^2.2.0",
     "rimraf": "^3.0.2",
     "ts-node": "^10.1.0",
@@ -64,7 +64,7 @@
     "typescript": "^4.3.4"
   },
   "resolutions": {
-    "prettier": "^2.5.1",
+    "prettier": "^2.6.2",
     "tslib": "^2.3.1"
   },
   "typeCoverage": {
